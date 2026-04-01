@@ -32,7 +32,7 @@ jobs:
           npm i
           npm run checkin
       - name: 🚗 Keep Running
-        # if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule'
         run: |
           git config --local user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
